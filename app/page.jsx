@@ -9,6 +9,14 @@ const filmVideos = [
   {
     src: "/videos/film-02.mp4",
     className: "h-[62vh] min-h-[30rem] w-[min(34rem,70vw)]"
+  },
+  {
+    src: "/videos/film-03.mp4",
+    className: "h-[70vh] min-h-[32rem] w-[min(36rem,72vw)]"
+  },
+  {
+    src: "/videos/film-04.mp4",
+    className: "h-[64vh] min-h-[30rem] w-[min(34rem,70vw)]"
   }
 ];
 
