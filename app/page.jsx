@@ -1,4 +1,5 @@
 import PhotoFrame from "@/components/PhotoFrame";
+import { sitePath } from "@/site-path";
 
 const filmVideos = [
   {
@@ -24,7 +25,7 @@ export default function Home() {
         {filmVideos.map((video) => (
           <div key={video.src} className={`${video.className} overflow-hidden bg-stone`}>
             <video
-              src={video.src}
+              src={sitePath(video.src)}
               className="h-full w-full object-cover"
               loop
               controls

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import PhotoFrame from "@/components/PhotoFrame";
+import { sitePath } from "@/site-path";
 
 const galleries = [
   {
@@ -79,7 +80,7 @@ function PhotoGallery({ gallery }) {
             style={{ aspectRatio }}
           >
             <Image
-              src={photo.src}
+              src={sitePath(photo.src)}
               alt=""
               fill
               sizes={photo.orientation === "vertical" ? "57vh" : "134vh"}
