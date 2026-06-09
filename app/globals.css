@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-serif: "Songti SC", "Noto Serif SC", Georgia, serif;
+  --font-sans: "Inter", "PingFang SC", "Hiragino Sans GB", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #272522;
+  background: #f7f5f0;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: #343632;
+  color: #f4f0e8;
+}
+
+.photo-grain {
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-grain::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  opacity: 0.14;
+  background-image:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.18), transparent 28%),
+    repeating-radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.22) 0 1px, transparent 1px 5px);
+  mix-blend-mode: soft-light;
+}
+
+.image-slot {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0)),
+    var(--slot-color, #c9c0b3);
+}
+
+.vertical-writing {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
