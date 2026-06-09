@@ -3,7 +3,11 @@ import Header from "@/components/Header";
 
 export const metadata = {
   title: "vivi",
-  description: "电影感、自然光、低饱和的个人摄影作品集网站。"
+  description: "电影感、自然光、低饱和的个人摄影作品集网站。",
+  icons: {
+    icon: "/icon.jpg",
+    apple: "/icon.jpg"
+  }
 };
 
 export default function RootLayout({ children }) {
