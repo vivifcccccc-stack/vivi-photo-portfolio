@@ -1,12 +1,14 @@
 import "./globals.css";
 import Header from "@/components/Header";
 
+const iconPath = process.env.GITHUB_PAGES === "true" ? "/vivi-photo-portfolio/icon.jpg" : "/icon.jpg";
+
 export const metadata = {
   title: "vivi",
   description: "电影感、自然光、低饱和的个人摄影作品集网站。",
   icons: {
-    icon: "/icon.jpg",
-    apple: "/icon.jpg"
+    icon: iconPath,
+    apple: iconPath
   }
 };
 
