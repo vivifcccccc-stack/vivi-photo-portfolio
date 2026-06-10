@@ -4,19 +4,18 @@ import { sitePath } from "@/site-path";
 const filmVideos = [
   {
     src: "/videos/film-01.mov",
-    className: "h-[72vh] min-h-[34rem] w-[min(38rem,74vw)]"
-  },
-  {
-    src: "/videos/film-02.mp4",
-    className: "h-[62vh] min-h-[30rem] w-[min(34rem,70vw)]"
+    aspectRatio: "16 / 9",
+    className: "h-[62vh] min-h-[24rem] max-h-[44rem]"
   },
   {
     src: "/videos/film-03.mp4",
-    className: "h-[70vh] min-h-[32rem] w-[min(36rem,72vw)]"
+    aspectRatio: "16 / 9",
+    className: "h-[62vh] min-h-[24rem] max-h-[44rem]"
   },
   {
     src: "/videos/film-04.mp4",
-    className: "h-[64vh] min-h-[30rem] w-[min(34rem,70vw)]"
+    aspectRatio: "9 / 16",
+    className: "h-[72vh] min-h-[32rem] max-h-[52rem]"
   }
 ];
 
@@ -31,7 +30,11 @@ export default function Home() {
       <section className="flex min-w-max items-start gap-12 md:gap-20">
         <div className="w-10 shrink-0 md:w-16" />
         {filmVideos.map((video) => (
-          <div key={video.src} className={`${video.className} overflow-hidden bg-stone`}>
+          <div
+            key={video.src}
+            className={`${video.className} shrink-0 overflow-hidden bg-stone`}
+            style={{ aspectRatio: video.aspectRatio }}
+          >
             <video
               src={sitePath(video.src)}
               className="h-full w-full object-cover"
